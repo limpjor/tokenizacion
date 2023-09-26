@@ -1,0 +1,23 @@
+service: mi-proyecto-lambda
+provider:
+  name: aws
+  runtime: nodejs19.x
+  region: us-east-1
+
+plugins:
+  - serverless-dotenv-plugin
+  - serverless-plugin-typescript
+  - serverless-webpack
+
+functions:
+  createToken:
+    handler: dist/controllers/tokenController.createToken
+    events:
+      - http:
+          path: createToken
+          method: post
+          cors: true∫
+
+custom:
+  webpack:
+    webpackConfig: ./webpack.config.js

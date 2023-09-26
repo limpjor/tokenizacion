@@ -1,0 +1,10 @@
+Tokenización de Tarjetas
+
+Api para validar una tarjeta y devuelve un token 
+
+npm install para descargar las dependencias 
+npm start para le levantar las apis
+npm build para contruir el proyecto y subirlo al aws
+
+
+serverless deploy para levantar localmente
